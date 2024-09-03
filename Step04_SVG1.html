@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_SVG1</title>
+    <style>
+        .weather {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: #eee;
+            width: 500px;
+        }
+
+        .cloud {
+            fill : skyblue;
+        }
+
+        .sun {
+            fill : orange;
+            transform-origin: 71.18px 23.72px;
+            animation: wAni 0.5s infinite alternate;
+        }
+
+        .line {
+            stroke: orange;
+        }
+        @keyframes wAni {
+            0% {
+                transform: scale(0.95);
+            }
+            100% {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg class="weather" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <ellipse class="cloud" cx="36.34" cy="58.72" rx="13" ry="8.72"/>
+    <ellipse class="cloud" cx="50.5" cy="58.72" rx="13" ry="8.72"/>
+    <ellipse class="cloud" cx="43.21" cy="49.38" rx="13" ry="8.72"/>
+    <circle class="sun" cx="71.18" cy="23.72" r="7"/>
+    <line class="line" x1="78.71" y1="14.86" x2="81.96" y2="12.23"/>
+    <line class="line" x1="81.96" y1="22.6" x2="86.95" y2="22.6"/>
+    <line class="line" x1="80.34" y1="28.59" x2="84.46" y2="32.59"/>
+    <line class="line" x1="70.6" y1="34.71" x2="70.6" y2="39.95"/>
+    <line class="line" x1="62.31" y1="30.59" x2="56.21" y2="33.33"/>
+    <line class="line" x1="59.86" y1="22.6" x2="53.75" y2="22.6"/>
+    <line class="line" x1="63.49" y1="14.86" x2="56.8" y2="10.61"/>
+    <path class="line" d="M5.68,93.13c0,0,2-9.86,17.67-15.98s19.87,15.98,19.87,15.98"/>
+    <path class="line" d="M36.34,92.13"/>
+    <path class="line" d="M37.5,94.51"/>
+    <path class="line" d="M57.62,89.51c0,0,7.62-17.23,15.86-17.73c4.68-0.28,7.95-8.73,9.19-11.26c0.95-1.92,0.72-0.41-0.95,10.76
+	C77.84,97.13,57.62,89.51,57.62,89.51z"/>
+    <path class="line" d="M83.38,60.11c6.69,0.44,8.81-4.31,8.81-4.31l-0.75,32.33L56.8,89.76c0,0,19.91,12.48,27.65,5.49
+	c7.74-6.99-5.49,11.49-3.25-9.24c2.25-20.72,15.98-36.03,3.25-18.58"/>
+</svg>
+
+</body>
+</html>
