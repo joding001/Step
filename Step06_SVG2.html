@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Step06_SVG2</title>
+    <title>SVG Text on Path</title>
     <style>
-        body {
-            margin: 0;
+        svg {
+            width: 500px;
+            height: 500px;
         }
-
-        text {
-            font-size: 1.5em;
-            font-weight: bold;
-            fill: red;
-        }
-
-        
     </style>
 </head>
 <body>
-    <svg class="svg">
-        <!-- 나중에 참조할 그래픽 요소를 담아놓은 태그 -->
+    <svg width="500" height="500">
+        <!-- 경로 정의 -->
         <defs>
-            <path d="M 50 400 C 50 400, 300 500, 400 400 C 400 400, 600 170, 700 300"></path>
+            <path id="curve" d="M 0 0 C 0 0, 500 0, 500 500 " fill="none" stroke="lightgray"/>
         </defs>
-        <text x="20" y="50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quibusdam optio architecto ipsum, fugit, molestias aperiam, animi impedit veritatis omnis id illum a ipsa dignissimos similique voluptate repudiandae laboriosam natus!</text>
+        
+        <!-- 텍스트를 경로에 따라 배치 -->
+        <text font-family="Arial" font-size="24" fill="black">
+            <textPath href="#curve">
+                This is text on a curved path!
+            </textPath>
+        </text>
     </svg>
 </body>
 </html>
