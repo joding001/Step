@@ -3,28 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Step06_SVG2</title>
+    <title>Step06_SVG2.html</title>
     <style>
-        body {
-            margin: 0;
+        svg {
+            width: 700x;
+            height: 700px;
+            background-color: rebeccapurple;
         }
-
-        text {
-            font-size: 1.5em;
-            font-weight: bold;
-            fill: red;
-        }
-
-        
     </style>
 </head>
 <body>
-    <svg class="svg">
-        <!-- 나중에 참조할 그래픽 요소를 담아놓은 태그 -->
+    <svg width="700" height="700">
         <defs>
-            <path d="M 50 400 C 50 400, 300 500, 400 400 C 400 400, 600 170, 700 300"></path>
+            <path id="curve" d="M 350 100 C 350 100, 600 100, 600 350 C 600 350, 600 600, 350 600 C 350 600, 100 600, 100 350 C 100 350, 100 100, 350 100" fill="none" stroke="lightgray"/>
         </defs>
-        <text x="20" y="50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quibusdam optio architecto ipsum, fugit, molestias aperiam, animi impedit veritatis omnis id illum a ipsa dignissimos similique voluptate repudiandae laboriosam natus!</text>
+        
+        <text font-size="20px" fill="black">
+            <textPath href="#curve">
+                a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a
+            </textPath>
+        </text>
     </svg>
 </body>
 </html>
